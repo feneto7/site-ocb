@@ -40,7 +40,7 @@
 
 .line{
     width: 100%;
-    background-color: #ffffff;
+    background-color: #dfb837;
     height: .1rem;
     box-shadow: 0.1rem 0.1rem 1px #000000;
     transition: all 1s;
@@ -51,8 +51,8 @@
 .show-menu #line1{
     position: relative;
     transform: rotate(50deg);
-    left: 8px;
-    bottom:1px;
+    left: 9px;
+    bottom:-10px;
 
 }
 .show-menu #line2{
@@ -60,12 +60,33 @@
     transform: rotate(126deg);
     margin-bottom: 10px;
     left: 10px;
-    bottom: 5px;
+    bottom: -5px;
 
 }
 .show-menu #line3{
     opacity: 0;
 
+}
+
+.hamburguer span{
+    color: #000000;
+    position: absolute;
+    left: 3rem;
+    top:0;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    background-color: #ffffff;
+    background: -webkit-linear-gradient(to right, #000000, #f12711);
+    background: linear-gradient(to right, #bbbbbb, #fcd057bd);
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+.show-menu .hamburguer:hover span{
+    opacity: 1;
 }
 
 header{
@@ -133,12 +154,13 @@ header{
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
-    color: aliceblue;
-    background-color: #f12711;
-    background: -webkit-linear-gradient(to right, #f5af19, #f12711);
-    background: linear-gradient(to right, #f5af19, #f12711);
+    color: rgb(255, 255, 255);
+    background-color:#ffffff10;
+    border: 2px solid #ffffff30;
+    /* background: -webkit-linear-gradient(to right, #0a0804, #fcd057bd); */
+    /* background: linear-gradient(to right, #fcd057bd, #000000); */
     padding: 1rem 2rem;
-    border: none;
+    /* border: none; */
     border-radius: 5px;
     cursor: pointer;
     animation: moveBanner 2s 0.9s forwards;
@@ -147,7 +169,8 @@ header{
 
 .banner button:hover{
     opacity: 0.8;
-    color: #000000;
+    color: #c9ab48;
+    border: 2px solid #c9ab48;
 }
 
 @keyframes moveBanner{
@@ -164,7 +187,8 @@ header{
 .sidebar{
     width: 20rem;
     height: 100vh;
-    background-color: #ffffff;
+    background-color: #ffffff10;
+    border: 2px solid #ffffff30;
     position: fixed;
     top: 0;
     right: -20rem;
@@ -179,25 +203,37 @@ header{
 
 .menu{
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    width: 100%;
+    
 }
 
 .menu-item{
     text-align:center;
-    margin-bottom: .4;
+    margin-bottom: .2rem;
+    width: 100%;
 }
 
 .menu-link{
     font-family: var(--font-action);
+    padding-bottom: .4rem;
+    padding-left: 1rem;
     font-size: 2rem;
-    color: #ffdc16;
+    color: #ffffff;
     transition: color 1s;
-
+    background-color: #000000;
+    background: -webkit-linear-gradient(to right, #42403d, #999393);
+    background: linear-gradient(to right, #42403d, #99939330);
+    display: flex;
+    /* text-shadow: .2rem .1rem 2px black; */
 }
 
 .menu-link:hover{
-    color: #f12711;
+    color: #fcd057bd;
+    border-bottom: .1rem solid #ffe608;
+    /* background-color: #ffffff50; */
+    /* background: -webkit-linear-gradient(to right, #ffffff, #b6954f); */
+    /* background: linear-gradient(to right, #f8f8f8, #cfa957); */
 }
